@@ -120,4 +120,4 @@ def editarPerfil(request):
       return render(request, 'blog/post_list.html', {'usuario': usuario, 'mensaje': 'Datos actualizados correctamente'})
   else:
     formulario = UserEditForm(instance=usuario)
-  return render(request, 'blog/editarPerfil.html', {'formulario': formulario, 'usuario': usuario.username})
+  return render(request, 'blog/editarperfil.html', {'formulario': formulario, 'usuario': usuario.username})
