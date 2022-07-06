@@ -17,6 +17,7 @@ urlpatterns = [
     path('register', views.register, name='register'),
     path('logout/', LogoutView.as_view(template_name='blog/logout.html'), name='logout'),
     path('editarperfil/', views.editarPerfil, name='editarperfil'),
+    path('aboutme/', views.aboutme, name='aboutme'),
         
 ]
 

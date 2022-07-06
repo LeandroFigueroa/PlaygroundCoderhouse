@@ -30,6 +30,8 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
+            post.imagen = request.FILES.get( 'image')
+            post.short_text = request.POST.get('short_text')
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -45,6 +47,8 @@ def post_edit(request, pk):
             post = form.save(commit=False)
             post.author = request.user
             post.published_date = timezone.now()
+            post.imagen = request.FILES.get( 'image')
+            post.short_text = request.POST.get('short_text')
             post.save()
             return redirect('post_detail', pk=post.pk)
     else:
@@ -121,3 +125,7 @@ def editarPerfil(request):
   else:
     formulario = UserEditForm(instance=usuario)
   return render(request, 'blog/editarperfil.html', {'formulario': formulario, 'usuario': usuario.username})
+
+
+def aboutme(request):
+    return render(request, 'blog/aboutme.html')
