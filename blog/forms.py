@@ -22,10 +22,10 @@ class UserRegistrationForm(UserCreationForm):
   email = forms.EmailField(required=True)
   password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
   password2 = forms.CharField(label="Confirmar contraseña", widget=forms.PasswordInput)
-  class Meta: #Esto es para que el formulario sepa que campos tiene que mostrar
+  class Meta: 
     model = User
     fields = ['username', 'email', 'password1', 'password2']
-    help_texts={k:"" for k in fields} #Esto es para que el formulario no muestre los mensajes de ayuda
+    help_texts={k:"" for k in fields} 
 
 class UserEditForm(UserCreationForm):
   email = forms.EmailField(required=False)
@@ -36,7 +36,7 @@ class UserEditForm(UserCreationForm):
   age = forms.IntegerField(label="Edad", required=False)
 
 
-  class Meta: #Esto es para que el formulario sepa que campos tiene que mostrar
+  class Meta:
     model = User
     fields = ['username', 'email', 'first_name', 'last_name','age', 'password1', 'password2']
-    help_texts={k:"" for k in fields} #Esto es para que el formulario no muestre los mensajes de ayuda
+    help_texts={k:"" for k in fields} 

@@ -119,6 +119,7 @@ def editarPerfil(request):
       usuario.email = informacion['email']
       usuario.password1 = informacion['password1']
       usuario.password2 = informacion['password2']
+      usuario.age = informacion['age']
       usuario.save()
 
       return render(request, 'blog/post_list.html', {'usuario': usuario, 'mensaje': 'Datos actualizados correctamente'})
@@ -129,3 +130,6 @@ def editarPerfil(request):
 
 def aboutme(request):
     return render(request, 'blog/aboutme.html')
+
+def miperfil(request):
+    return render(request, 'blog/miperfil.html')

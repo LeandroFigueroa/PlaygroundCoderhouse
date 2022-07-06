@@ -18,19 +18,21 @@
         <a href="{% url 'logout' %}" class="top-menu"> <h5> logout </h5>  </a>
         <a href="{% url 'editarperfil' %}" class="top-menu"> <h5> Editar </h5>  </a>
         <a href="{% url 'post_new' %}" class="top-menu"> <h5> Crear<br>post </h5>  </a>
+        <a href="{% url 'miperfil' %}" class="top-menu"> <h5>Mi perfil</h5>  </a>
         <p class="top-menu">Hola {{ user.username }}</p>
 
-        
-
-        
+    
          {% else %}
+         
          <a href="{% url 'login' %}" class="top-menu"> Login </a> 
          <a href="{% url 'register' %}" class="top-menu"> Registrarse  </a>
+         
    
 
         
          {% endif %}
          <h4><a href="{% url 'aboutme' %}" class="top-menu"> <h5> Sobre mi </h5>  </a></h4>
+         
         <h1><a href="/">River Blog</a></h1>
 
     </div>
