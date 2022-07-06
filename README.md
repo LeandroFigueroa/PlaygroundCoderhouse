@@ -44,3 +44,7 @@ Nos desconecta y nos da un mensaje de que nos deslogueamos correctamente.
 Dejo link de despliegue para verlo en funcionamiento
 
 https://leandrofigueroa.pythonanywhere.com/
+
+Link del video a youtube explicando el funcionamiento.
+
+https://youtu.be/T2suDZqq_Kc
